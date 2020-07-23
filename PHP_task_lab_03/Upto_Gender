@@ -1,0 +1,98 @@
+<?php
+
+	if(isset($_GET['submit'])){
+
+		$a = $_GET['sname'];
+        $e = $_GET['email'];
+        $g = $_GET["gender"];
+          
+        $alphats = array_merge(range('A', 'Z'), range('a', 'z'),array('.','/'));
+        
+        
+        if(str_word_count($a)<2)
+        {
+            echo"Invalid name!!!! Must be two words.";
+        }
+        
+
+		if(strlen($a)==null){
+
+			echo "Invalid request";
+        }
+        
+        if(is_array($a,$alphats)==false){
+            echo"Invalid name!!!! Must be 1st letter in name ";
+        }
+        if(is_numeric($a[0])==true){
+            echo"Invalid name!!!! Must start with a letter ";
+        }
+               
+        if (strlen($e)==null)
+        {
+            echo"Invalid email";
+        }
+        if (!filter_var($e, FILTER_VALIDATE_EMAIL)) 
+        {
+           echo "Invalid email format";
+
+	    }
+       
+        
+        else
+        {
+            echo $e,$a;
+        }
+        if (empty($g)) 
+        {
+            echo "Gender is required";
+         } else 
+        {
+            echo $g;
+        }
+    }
+	
+
+?>
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Name Input</title>
+
+</head>
+
+<body>
+
+
+
+	<form action="#" method="GET">
+
+		<fieldset>
+
+			NAME<br>
+
+			<input type="text" name="sname" value=""><br>
+            <input type="submit" name="submit" value="Submit"><br>
+            Email <br>
+            <input type="email" email="email" value=""> <button style="border: 3px solid blue; color: blue; width: 10px;" title='hint: sample@example.com'><b>i</b></button> <br>
+            <input type="submit" name="submit" value="Submit"> 
+            <legend> Gender </legend>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other<br>
+
+			<input type="submit" name="submit" value="Submit"><br>
+            
+            
+           
+                   
+
+		</fieldset>
+
+	</form>
+
+</body>
+</html>
