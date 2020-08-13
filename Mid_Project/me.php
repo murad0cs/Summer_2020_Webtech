@@ -1,0 +1,1 @@
+About Me : <br/><?php echo $_POST["cmnt"]; ?><br>
