@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="picture.js"></script>
+</head>
+<body>
+    <form action="picture.php" onsubmit="return validate()" method="GET">
+        <table>
+            <tr>
+                <legend>Profile Picture</legend>
+                <td>User id</td>
+                <td><input type="number" id="id" name="id" onkeyup="remover()" onblur="xyz()" /></td>
+                <td id="userMsg"> </td>
+            </tr>
+            <tr>
+                <td>Picture</td>
+                <td><input type="file" id="file" name="file"></td>
+                <td id="fileMsg"> </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="submit" value="submit" ></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
