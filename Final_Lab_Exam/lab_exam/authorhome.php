@@ -12,8 +12,9 @@ echo "<h1> Welcome Home  ".$user['name']."</h1>";
 </head>
 <body>
 
-<a href="Profile.php">Profile</a><br>
-<a href="ChangePassword.html">Change Password</a><br>
+<a href="viewblog.php">View Blog</a><br>
+<a href="updateblog.php">Update Blog</a><br>
+<a href="deleteblog.php">Delete Blog</a><br>
 <a href="Logout.php">Logout</a><br>
 </body>
 
